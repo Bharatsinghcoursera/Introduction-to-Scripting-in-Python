@@ -1,0 +1,98 @@
+#-*- coding: utf-8 -*-
+
+#@Poject: Python Programming Essentials 2020
+#@AUTHOR : BHARAT SINGH
+
+
+1. Cube_root(1.0)
+
+2.Incorrect indentation
+
+3.
+#The following code has a number of syntactic errors in it. The intended math calculations are correct, so the only
+#errors are syntactic. Fix these errors.
+
+#Once the code has been fully corrected, it should print out two numbers. The first should be 1.09888451159.
+#Submit the second number printed in CodeSkulptor3. Make sure that you enter at least four digits after the decimal point.
+
+#define project_to_distance(point_x point_y distance):
+#    dist_to_origin = (pointx ** 2 + pointy ** 2) ** 0.5
+#    scale == distance / dist_to_origin
+#   print point_x * scale, point_y * scale
+#project-to-distance(2, 7, 4)
+
+def project_to_distance(point_x, point_y, distance):
+    dist_to_origin=(point_x ** 2 + point_y ** 2) ** 0.5
+    scale=distance / dist_to_origin
+    print (point_x * scale, point_y * scale)
+
+project_to_distance(2, 7, 4)
+
+
+4.Hello world
+Is it over yet?
+
+5.
+#Implement the mathematical function f(x)=−5x5+67x2−47 as a Python function. Then use Python to compute the function
+#values f(0), f(1), f(2), and f(3). Enter the maximum (largest) of these four values calculated below.
+
+#A common error for this question is to fail to read the directions above carefully and submit your answer in the
+#incorrect form. As a coder, always remember to note exactly what answers your code (and quiz questions) should produce.
+
+def homework_2(x):
+    result=(-5*(x**5))+(67*(x**2))-47
+    return result
+
+print(homework_2(0))
+print(homework_2(1))
+print(homework_2(2))
+print(homework_2(3))
+
+6.
+#When investing money, an important concept to know is compound interest.
+
+#The equation FV=PV(1+rate)^periods relates the following four quantities.
+
+    #The present value (PV) of your money is how much money you have now.
+    #The future value (FV) of your money is how much money you will have in the future.
+    #The nominal interest rate per period (rate) is how much interest you earn during a particular length of time,
+    #before accounting for compounding. This is typically expressed as a percentage.
+    #The number of periods (periods) is how many periods in the future this calculation is for.
+
+#Finish the following code, run it, and submit the printed number. Provide at least four digits of precision after the
+#decimal point.
+
+
+def future_value(present_value, annual_rate, periods_per_year, years):
+    """
+    Input: the numbers present_value, annual_rate, periods_per_year, years
+    Output: future value based on formula given in question
+    """
+    rate_per_period = annual_rate / periods_per_year
+    periods = periods_per_year * years
+
+    return present_value*(1+rate_per_period)**periods
+
+
+print("$1000 at 2% compounded daily for 4 years yields $", future_value(1000, .02, 365, 4))
+
+
+7.	
+	#For this final question, your task is to find the formula for a simple geometric problem using Google and then implement
+	#that formula in Python. While you may think that it is silly that we don't ' \
+	
+	#Write a Python function that computes the area of an equilateral triangle given the length of one of its sides.
+	#Search for a mathematical formula that specifies this relation and translate that formula into Python. Hint:
+	
+	#As a test, your area function should return an area of 1.73205080757 for an equilateral triangle with sides of length
+	#2. Now, use this function to compute the area of equilateral triangle with sides of length 5. Enter this area as a number
+	#(and not the units) with at least four digits of precision after the decimal point.
+	
+	import math
+	
+	value=int(input("Please give the length of an equilateral triangle side: "))
+	
+	def equilateral_triangle(x):
+	result = ((math.sqrt(3))/4)*(x**2)
+	return result
+	print("Are of equilateral triangle is ", equilateral_triangle(value))
